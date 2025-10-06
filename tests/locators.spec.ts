@@ -151,6 +151,18 @@ AXES - xpath
 
 These are the recommended built-in locators.
 
+page.getByRole() - 
+page.getByText() - 
+page.getByLabel()
+page.getByAltText()
+page.getByTestId() - 
+page.getByPlaceholder() - 
+page.getByTitle()
+
+
+
+
+
 1. page.getByRole('radio', {name: 'Female'}) to locate by explicit and implicit accessibility attributes.
 
 2. page.getByText('Student Registration Form', {exact: true}) to locate by text content.
@@ -159,6 +171,8 @@ These are the recommended built-in locators.
 
     1. When you have "for" as an attribute for an element that have been developed using <label> - there we can directly use page.getByLable('label text')
     2. When you find out <input> inside the <label> - 
+
+    page.getByLabel("Username")
 
 4. page.getByPlaceholder('First Name')  - to locate an input by placeholder as an attribute.
 
