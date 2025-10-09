@@ -171,6 +171,7 @@ page.getByTitle()
 
     1. When you have "for" as an attribute for an element that have been developed using <label> - there we can directly use page.getByLable('label text')
     2. When you find out <input> inside the <label> - 
+    <label class="form-check-label" <input.....>Tuesday</label>
 
     page.getByLabel("Username")
 

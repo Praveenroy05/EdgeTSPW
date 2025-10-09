@@ -76,5 +76,10 @@ test("Radio button and checkbox", async ({page})=>{
     await radioButton.check()
     // toBeChecked() - It will validate the checkbox or radio button is checked
     await expect(radioButton).toBeChecked()
-    
+    const checkBox = page.getByLabel("Wednesday")
+    await checkBox.check()
+    await expect(checkBox).toBeChecked()
+    await checkBox.uncheck()
+    await expect(checkBox).not.toBeChecked()
+
 })
