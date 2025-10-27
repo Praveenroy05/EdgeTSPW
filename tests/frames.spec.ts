@@ -36,3 +36,10 @@ test("Nested frames handling", async ({page})=>{
 // Note: Avoid using frame() method as it is deprecated
 
 // File upload and shadow dow
+
+test("Frames", async ({page})=>{
+    await page.goto("https://selectorshub.com/iframe-scenario/")
+    const framePage = page.locator('#pact1').first().contentFrame()
+    await framePage.locator("#inp_val").fill("CEO")
+    await expect(framePage.locator("#inp_val")).toHaveValue("CEO")
+})
